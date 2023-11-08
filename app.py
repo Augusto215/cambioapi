@@ -17,6 +17,10 @@ def scrape():
         page = browser.new_page()
         page.goto('https://bitcoinp2p.org')
         html_content = page.content()
+
+        # Log the HTML content for inspection
+        print(html_content)
+
         browser.close()
 
     soup = BeautifulSoup(html_content, 'html.parser')
