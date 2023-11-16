@@ -1,5 +1,5 @@
 
-Copy code
+COPY . /app
 # Use a imagem base do Python 3.9 Slim Buster
 FROM python:3.9-slim-buster
 
