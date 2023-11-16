@@ -1,3 +1,5 @@
+
+Copy code
 # Use a imagem base do Python 3.9 Slim Buster
 FROM python:3.9-slim-buster
 
@@ -30,5 +32,5 @@ ENV FLASK_APP=app.py
 USER app
 ENV PORT=8080
 
-# Executar a aplicação
-CMD ["gunicorn", "-b", ":8080", "app:app"]
+# Executar a aplicação com timeout configurado
+CMD ["gunicorn", "-b", ":8080", "--timeout", "120", "app:app"]
